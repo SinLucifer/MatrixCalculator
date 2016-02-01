@@ -47,6 +47,5 @@ public class PlusFragment extends Fragment implements View.OnClickListener{
         intent = new Intent(getActivity(), CaculatingActivity.class);
         intent.putExtra("Matrix_INFO",matrix);
         startActivity(intent);
-        Log.d("hello-git","dd");
     }
 }
