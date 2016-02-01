@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/plus"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Plus" />
+        <item
+            android:id="@+id/subtraction"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Subtraction" />
+        <item
+            android:id="@+id/multiple"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Multiple" />
+        <item
+            android:id="@+id/division"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Division" />
+    </group>
+
+    <item android:title="Advance">
+        <menu>
+            <item
+                android:id="@+id/determinant"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Determinant"/>
+            <item
+                android:id="@+id/inverse"
+                android:icon="@mipmap/ic_launcher"
+                android:title="Inverse Matrix" />
+            <item
+                android:id="@+id/adjugate"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Adjugate Matrix" />
+        </menu>
+    </item>
+
+</menu>
