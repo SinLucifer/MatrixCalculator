@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,5 +47,6 @@ public class PlusFragment extends Fragment implements View.OnClickListener{
         intent = new Intent(getActivity(), CaculatingActivity.class);
         intent.putExtra("Matrix_INFO",matrix);
         startActivity(intent);
+        Log.d("hello-git","dd");
     }
 }
