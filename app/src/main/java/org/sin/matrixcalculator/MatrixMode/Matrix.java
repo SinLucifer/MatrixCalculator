@@ -3,13 +3,11 @@ package org.sin.matrixcalculator.MatrixMode;
 import java.io.Serializable;
 import java.util.Scanner;
 
-/**
- * Created by Sin on 2016/1/30.
- */
+
 public class Matrix implements Serializable{
     private int x;
     private int y;
-    private double matrix[][];
+    public double matrix[][];
 
     public int getY() {
         return y;
@@ -89,8 +87,7 @@ public class Matrix implements Serializable{
 
     public Matrix division(Matrix t) {
         Matrix ni = t.getNiMatrix();
-        Matrix result = this.multipe(ni);
-        return result;
+        return this.multipe(ni);
     }
 
     public static Matrix getDY(double[][] data, int h, int v) {
@@ -202,12 +199,15 @@ public class Matrix implements Serializable{
         return result;
     }
 
-    public void show() {
+    public String show() {
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
-                System.out.print(matrix[i][j] + " ");
+                sb.append(matrix[i][j]);
+                sb.append(" ");
             }
-            System.out.println();
+           sb.append("\n");
         }
+        return sb.toString();
     }
 }
