@@ -5,20 +5,17 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import org.sin.matrixcalculator.CaculatingActivity;
+import org.sin.matrixcalculator.CalculatingActivity;
 import org.sin.matrixcalculator.MatrixMode.Matrix;
 import org.sin.matrixcalculator.R;
 
-/**
- * Created by Sin on 2016/1/30.
- */
+
 public class PlusFragment extends Fragment implements View.OnClickListener{
     private Intent intent;
     private Button bn;
@@ -44,7 +41,7 @@ public class PlusFragment extends Fragment implements View.OnClickListener{
        matrix = new Matrix(Integer.parseInt(x.getText().toString().trim()),
                Integer.parseInt(y.getText().toString().trim()),1);
 
-        intent = new Intent(getActivity(), CaculatingActivity.class);
+        intent = new Intent(getActivity(), CalculatingActivity.class);
         intent.putExtra("Matrix_INFO",matrix);
         startActivity(intent);
     }
