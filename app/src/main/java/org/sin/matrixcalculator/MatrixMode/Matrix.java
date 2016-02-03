@@ -8,6 +8,15 @@ public class Matrix implements Serializable{
     private int x;
     private int y;
     public double matrix[][];
+    private String method;
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
 
     public int getY() {
         return y;
@@ -34,6 +43,13 @@ public class Matrix implements Serializable{
     public Matrix(int x, int y, int flag) {
         this.x = x;
         this.y = y;
+        matrix = new double[x][y];
+    }
+
+    public Matrix(int x, int y, String method) {
+        this.x = x;
+        this.y = y;
+        this.method = method;
         matrix = new double[x][y];
     }
 
