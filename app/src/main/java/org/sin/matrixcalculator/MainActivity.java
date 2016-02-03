@@ -15,27 +15,25 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.sin.matrixcalculator.item.AdjugateFragment;
-import org.sin.matrixcalculator.item.DeterminFragment;
-import org.sin.matrixcalculator.item.DivisionFragment;
-import org.sin.matrixcalculator.item.InverseFragment;
-import org.sin.matrixcalculator.item.MultipleFragment;
-import org.sin.matrixcalculator.item.PlusFragment;
-import org.sin.matrixcalculator.item.SubtractionFragment;
+import org.sin.matrixcalculator.Setting_Fragment.SetXY_Fragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FragmentManager fm;
     private FragmentTransaction fragmentTransaction;
+    private Bundle bundle;
 
-    private PlusFragment mPlus;
-    private SubtractionFragment mSub;
-    private MultipleFragment mMult;
-    private DivisionFragment mDivi;
-    private InverseFragment mInverse;
-    private DeterminFragment mDetermin;
-    private AdjugateFragment mAdjugate;
+    public static final String ARGUMENT = "calculate_method";
+    public static final String PLUS = "Plus";
+    public static final String SUBTRACT = "Subtract";
+    public static final String MULTIPLE = "Multiple";
+    public static final String DIVIDE = "Divide";
+    public static final String DETERMINANT = "Determinant";
+    public static final String ADJUGATE = "Adjugate Matrix";
+    public static final String INVERSE = "Inverse Matrix";
+
+    private SetXY_Fragment mSetXY;
 
 
     @Override
@@ -104,30 +102,29 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction = fm.beginTransaction();
 
         int id = item.getItemId();
+        bundle = new Bundle();
+
+
+        mSetXY = new SetXY_Fragment();
 
         if (id == R.id.plus) {
-            mPlus = new PlusFragment();
-            fragmentTransaction.replace(R.id.frame_content,mPlus);
+            bundle.putString(ARGUMENT,PLUS);
         } else if (id == R.id.subtraction) {
-            mSub = new SubtractionFragment();
-            fragmentTransaction.replace(R.id.frame_content,mSub);
+            bundle.putString(ARGUMENT,SUBTRACT);
         } else if (id == R.id.multiple) {
-            mMult = new MultipleFragment();
-            fragmentTransaction.replace(R.id.frame_content,mMult);
+            bundle.putString(ARGUMENT,MULTIPLE);
         } else if (id == R.id.division) {
-            mDivi = new DivisionFragment();
-            fragmentTransaction.replace(R.id.frame_content,mDivi);
+            bundle.putString(ARGUMENT,DIVIDE);
         } else if (id == R.id.determinant) {
-            mDetermin = new DeterminFragment();
-            fragmentTransaction.replace(R.id.frame_content,mDetermin);
+            bundle.putString(ARGUMENT,DETERMINANT);
         } else if (id == R.id.adjugate) {
-            mAdjugate = new AdjugateFragment();
-            fragmentTransaction.replace(R.id.frame_content,mAdjugate);
+            bundle.putString(ARGUMENT,ADJUGATE);
         } else if (id == R.id.inverse) {
-            mInverse = new InverseFragment();
-            fragmentTransaction.replace(R.id.frame_content,mInverse);
+            bundle.putString(ARGUMENT,INVERSE);
         }
 
+        mSetXY.setArguments(bundle);
+        fragmentTransaction.replace(R.id.frame_content,mSetXY); //need FrameLayout ID,not layout
         fragmentTransaction.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

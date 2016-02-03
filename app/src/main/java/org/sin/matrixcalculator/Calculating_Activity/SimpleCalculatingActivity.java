@@ -1,4 +1,4 @@
-package org.sin.matrixcalculator;
+package org.sin.matrixcalculator.Calculating_Activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,9 +10,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import org.sin.matrixcalculator.MatrixMode.Matrix;
+import org.sin.matrixcalculator.R;
 
 
-public class CalculatingActivity extends Activity implements View.OnClickListener{
+public class SimpleCalculatingActivity extends Activity implements View.OnClickListener{
+    private TextView title;
     private TextView show;
     private EditText input;
     private Button submit;
@@ -26,13 +28,15 @@ public class CalculatingActivity extends Activity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calculating_activity);
+        setContentView(R.layout.simple_calculating_activity);
+        title = (TextView)findViewById(R.id.simple_title);
         show = (TextView)findViewById(R.id.show);
         input = (EditText)findViewById(R.id.input);
         submit = (Button)findViewById(R.id.submit);
 
         intent = getIntent();
         matrix1 = (Matrix) intent.getSerializableExtra("Matrix_INFO");
+        title.setText(matrix1.getMethod());
 
         submit.setOnClickListener(this);
     }
