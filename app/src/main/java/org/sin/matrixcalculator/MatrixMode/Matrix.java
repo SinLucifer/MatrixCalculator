@@ -53,19 +53,19 @@ public class Matrix implements Serializable{
         matrix = new double[x][y];
     }
 
-    public Matrix(int x, int y) {
-        this.x = x;
-        this.y = y;
-        matrix = new double[x][y];
-        Scanner input = new Scanner(System.in);
-        System.out.println("请输入" + x + "行" + y + "列的矩阵");
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                matrix[i][j] = input.nextDouble();
-            }
-        }
-        input.close();
-    }
+//    public Matrix(int x, int y) {
+//        this.x = x;
+//        this.y = y;
+//        matrix = new double[x][y];
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("请输入" + x + "行" + y + "列的矩阵");
+//        for (int i = 0; i < x; i++) {
+//            for (int j = 0; j < y; j++) {
+//                matrix[i][j] = input.nextDouble();
+//            }
+//        }
+//        input.close();
+//    }
 
     public Matrix add(Matrix t) {
         Matrix result = new Matrix(this, t);
