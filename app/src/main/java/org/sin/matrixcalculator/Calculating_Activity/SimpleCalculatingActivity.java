@@ -87,7 +87,6 @@ public class SimpleCalculatingActivity extends Activity {
                 System.out.print(matrix1.show());
                 return;
             }
-
             matrix1.matrix[x][y] = Double.parseDouble(input.getText().toString().trim());
             input.setText("");
             y++;
