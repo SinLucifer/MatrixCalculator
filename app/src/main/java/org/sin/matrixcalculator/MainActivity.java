@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -108,23 +108,23 @@ public class MainActivity extends AppCompatActivity
         mSetXY = new SetXY_Fragment();
 
         if (id == R.id.plus) {
-            bundle.putString(ARGUMENT,PLUS);
+            bundle.putString(ARGUMENT, PLUS);
         } else if (id == R.id.subtraction) {
-            bundle.putString(ARGUMENT,SUBTRACT);
+            bundle.putString(ARGUMENT, SUBTRACT);
         } else if (id == R.id.multiple) {
-            bundle.putString(ARGUMENT,MULTIPLE);
+            bundle.putString(ARGUMENT, MULTIPLE);
         } else if (id == R.id.division) {
-            bundle.putString(ARGUMENT,DIVIDE);
+            bundle.putString(ARGUMENT, DIVIDE);
         } else if (id == R.id.determinant) {
-            bundle.putString(ARGUMENT,DETERMINANT);
+            bundle.putString(ARGUMENT, DETERMINANT);
         } else if (id == R.id.adjugate) {
-            bundle.putString(ARGUMENT,ADJUGATE);
+            bundle.putString(ARGUMENT, ADJUGATE);
         } else if (id == R.id.inverse) {
-            bundle.putString(ARGUMENT,INVERSE);
+            bundle.putString(ARGUMENT, INVERSE);
         }
 
         mSetXY.setArguments(bundle);
-        fragmentTransaction.replace(R.id.frame_content,mSetXY); //need FrameLayout ID,not layout
+        fragmentTransaction.replace(R.id.frame_content, mSetXY); //need FrameLayout ID,not layout
         fragmentTransaction.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

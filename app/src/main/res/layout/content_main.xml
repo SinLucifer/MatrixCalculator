@@ -13,8 +13,13 @@
     tools:showIn="@layout/app_bar_main"
     tools:context="org.sin.matrixcalculator.MainActivity">
 
-    <FrameLayout
-        android:id="@+id/frame_content"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/frame_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+
 </RelativeLayout>

@@ -1,72 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/simple_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Title"
+        android:text="@string/title"
         android:textSize="30sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="40dp"
-        android:text="123456465"
-        android:id="@+id/show"
-        android:singleLine="false"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/input"
-        android:layout_gravity="center"
-        android:inputType="numberSigned|numberDecimal"
-        android:numeric="signed|decimal"
-        android:hint="number"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="input"
-        android:layout_gravity="center"
-        android:id="@+id/submit"/>
 
     <TextView
+        android:id="@+id/simple_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:paddingTop="40dp"
-        android:text="123456465"
-        android:id="@+id/show2"
-        android:singleLine="false"/>
+        android:singleLine="false"
+        android:text="@string/show_matrix" />
+
     <EditText
+        android:id="@+id/simple_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/input2"
         android:layout_gravity="center"
         android:inputType="numberSigned|numberDecimal"
-        android:numeric="signed|decimal"
-        android:hint="number"/>
-    <Button
+        android:numeric="signed|decimal" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="input"
         android:layout_gravity="center"
-        android:id="@+id/submit2"/>
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/simple_all_clear1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_clear" />
+
+        <Button
+            android:id="@+id/simple_submit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input" />
+
+        <Button
+            android:id="@+id/simple_back_space1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_space" />
+
+    </LinearLayout>
 
     <TextView
+        android:id="@+id/simple_show2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:paddingTop="40dp"
-        android:text="123456465"
-        android:id="@+id/result"
-        android:singleLine="false"/>
-    <Button
+        android:singleLine="false"
+        android:text="@string/show_matrix" />
+
+    <EditText
+        android:id="@+id/simple_input2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="equal"
         android:layout_gravity="center"
-        android:id="@+id/equal"/>
+        android:inputType="numberSigned|numberDecimal"
+        android:numeric="signed|decimal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/simple_all_clear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_clear" />
+
+        <Button
+            android:id="@+id/simple_submit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/input" />
+
+        <Button
+            android:id="@+id/simple_back_space2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_space" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/simple_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="40dp"
+        android:singleLine="false"
+        android:text="@string/show_result_matrix" />
+
+    <Button
+        android:id="@+id/simple_equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/equal" />
 </LinearLayout>
+</ScrollView>

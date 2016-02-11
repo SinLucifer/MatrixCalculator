@@ -3,6 +3,18 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+    
+    <!--set_fragment string-->
+    <string name="des">请输入要计算的矩阵的行数与列数:</string>
+    <string name="next">下一步</string>
+    
+    <!-- simple/complex string-->
+    <string name="title">Title</string>
+    <string name="show_matrix">此处将显示矩阵</string>
+    <string name="input">输入</string>
+    <string name="back_space">←</string>
+    <string name="all_clear">AC</string>
+    <string name="show_result_matrix">此处将显示结果</string>
+    <string name="equal">运算</string>
 </resources>
